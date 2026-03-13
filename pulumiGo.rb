@@ -5,20 +5,20 @@
 class Pulumigo < Formula
   desc "pulumiGo CLI tool"
   homepage "https://github.com/vincent119/pulumiGo"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.0/pulumiGo_Darwin_x86_64.tar.gz"
-      sha256 "1dacde8cfeef65b1ec94b118ddd6b885e0dfaf6521764a9bfd8b81faa49246a8"
+      url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.1/pulumiGo_Darwin_x86_64.tar.gz"
+      sha256 "c4ce7f82c73c77d6bebd658e638ea8e052c48ba1dcb3084a3fddfb3256e180a4"
 
       define_method(:install) do
         bin.install "pulumiGo"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.0/pulumiGo_Darwin_arm64.tar.gz"
-      sha256 "a48664f851d1a4b437878d530cc0752ccb8d015973ece4a587f29ebbe8064f57"
+      url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.1/pulumiGo_Darwin_arm64.tar.gz"
+      sha256 "9ac78fb9f8670dcb0fed2888520296eb462a90c6a4e8af510aba0d3ccd8dac0f"
 
       define_method(:install) do
         bin.install "pulumiGo"
@@ -28,15 +28,15 @@ class Pulumigo < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.0/pulumiGo_Linux_x86_64.tar.gz"
-      sha256 "48bbf3caa615f5c615f0ab39123ad4ed2022632a183468a12f19592f4260ae6f"
+      url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.1/pulumiGo_Linux_x86_64.tar.gz"
+      sha256 "7d4bc585d4daa5df191d47a2f1514e0938762c1017f9da0cbec5d95c470a5ef5"
       define_method(:install) do
         bin.install "pulumiGo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.0/pulumiGo_Linux_arm64.tar.gz"
-      sha256 "eb56639f7c0bbc0c7a0e636c0700d54087a8ef0eb34277cddf6636f766524d7a"
+      url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.1/pulumiGo_Linux_arm64.tar.gz"
+      sha256 "b0e87c5bb85240c70566ed68d8bf1cd4c3f661ad735cc20c86d8b6c06760bcfa"
       define_method(:install) do
         bin.install "pulumiGo"
       end
