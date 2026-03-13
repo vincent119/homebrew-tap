@@ -10,7 +10,7 @@ class Pulumigo < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.0/pulumiGo_Darwin_x86_64.tar.gz"
-      sha256 "f0ad1355774d27eb5cda0f6597ae60688d195341529f2cb11b99b3bd4cfb8eb6"
+      sha256 "1dacde8cfeef65b1ec94b118ddd6b885e0dfaf6521764a9bfd8b81faa49246a8"
 
       define_method(:install) do
         bin.install "pulumiGo"
@@ -18,7 +18,7 @@ class Pulumigo < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.0/pulumiGo_Darwin_arm64.tar.gz"
-      sha256 "c4ddf7eda06112ab3044d998886b1cb484e548f45437528c14594600450cf185"
+      sha256 "a48664f851d1a4b437878d530cc0752ccb8d015973ece4a587f29ebbe8064f57"
 
       define_method(:install) do
         bin.install "pulumiGo"
@@ -29,14 +29,14 @@ class Pulumigo < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.0/pulumiGo_Linux_x86_64.tar.gz"
-      sha256 "f7d7ef3df3159e5752a642803a2cf176b3a5c45e7f8f42c4b1523b0f157486da"
+      sha256 "48bbf3caa615f5c615f0ab39123ad4ed2022632a183468a12f19592f4260ae6f"
       define_method(:install) do
         bin.install "pulumiGo"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.0/pulumiGo_Linux_arm64.tar.gz"
-      sha256 "f00ce1af512558202fa3498c4ec1bf27f3c5f8f7d02cd2b6092e6c51e6286a0f"
+      sha256 "eb56639f7c0bbc0c7a0e636c0700d54087a8ef0eb34277cddf6636f766524d7a"
       define_method(:install) do
         bin.install "pulumiGo"
       end
