@@ -5,40 +5,40 @@
 class Timesamp < Formula
   desc "A timestamp utility CLI."
   homepage "https://github.com/vincent119/timesamp"
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vincent119/timesamp/releases/download/0.0.6/timesamp_Darwin_x86_64.tar.gz"
-      sha256 "c06d42320281e50e1a8d206d532b715f4d57fe38f6046043208813c16ecd19f2"
+      url "https://github.com/vincent119/timesamp/releases/download/0.0.7/timesamp_Darwin_x86_64.tar.gz"
+      sha256 "7e7d8445753dabf946b4f0e5225f0b2ce4a2f7ef96e0d514e860363608d247f2"
 
       define_method(:install) do
-        bin.install "timesamp"
+        bin.install "timestamp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vincent119/timesamp/releases/download/0.0.6/timesamp_Darwin_arm64.tar.gz"
-      sha256 "587be80d7fc2f6412094fdbd41b694830c3d569b5bc35a9d5a446cab9f4edeba"
+      url "https://github.com/vincent119/timesamp/releases/download/0.0.7/timesamp_Darwin_arm64.tar.gz"
+      sha256 "d5fe3d4f16afe6a736fae81d7e21d2122d2870c7c020d90a1842ddea2c93a393"
 
       define_method(:install) do
-        bin.install "timesamp"
+        bin.install "timestamp"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vincent119/timesamp/releases/download/0.0.6/timesamp_Linux_x86_64.tar.gz"
-      sha256 "1b1ebc618d641ce4c9af5dec5cb028a8f8a6b00d72e99b375b25441bb311962b"
+      url "https://github.com/vincent119/timesamp/releases/download/0.0.7/timesamp_Linux_x86_64.tar.gz"
+      sha256 "107f3b83b9d0751a4386db96282533c55bd42d7c8a09a6fd862d89ac68bf7358"
       define_method(:install) do
-        bin.install "timesamp"
+        bin.install "timestamp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vincent119/timesamp/releases/download/0.0.6/timesamp_Linux_arm64.tar.gz"
-      sha256 "75b75d83bfe60aa4dea6a9271ce10b14c6f68777d9c7c05ef9f8cc9b0bab5ac4"
+      url "https://github.com/vincent119/timesamp/releases/download/0.0.7/timesamp_Linux_arm64.tar.gz"
+      sha256 "79f7e6504ab45f9e941b4e5feea846f5401adede040a439cfcf7b0e959c3dfa8"
       define_method(:install) do
-        bin.install "timesamp"
+        bin.install "timestamp"
       end
     end
   end
