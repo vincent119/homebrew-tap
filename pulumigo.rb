@@ -11,18 +11,10 @@ class Pulumigo < Formula
     if Hardware::CPU.intel?
       url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.3/pulumiGo_Darwin_x86_64.tar.gz"
       sha256 "5a8ce5469588fb18ffa4f06cc4c36345ca676dc9220fb1a179e453beefbc1d0d"
-
-      define_method(:install) do
-        bin.install "pulumiGo"
-      end
     end
     if Hardware::CPU.arm?
       url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.3/pulumiGo_Darwin_arm64.tar.gz"
       sha256 "eb8d124b62a60dcdac6614b2b32452f1c2a219b0796c091cfe1ebf02afa20647"
-
-      define_method(:install) do
-        bin.install "pulumiGo"
-      end
     end
   end
 
@@ -30,17 +22,15 @@ class Pulumigo < Formula
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.3/pulumiGo_Linux_x86_64.tar.gz"
       sha256 "56af27d20cc14f5aed7b5448d699239afacecc4e2d173517c50500e6f037322e"
-      define_method(:install) do
-        bin.install "pulumiGo"
-      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/vincent119/pulumiGo/releases/download/v0.1.3/pulumiGo_Linux_arm64.tar.gz"
       sha256 "030c051aaf661c30226476ce92982a4562e075bd64b2f8cea90bd52cba1cd449"
-      define_method(:install) do
-        bin.install "pulumiGo"
-      end
     end
+  end
+
+  def install
+    bin.install "pulumiGo"
   end
 
   test do
